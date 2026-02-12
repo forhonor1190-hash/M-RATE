@@ -1,0 +1,13 @@
+.section--rating {
+  background: var(--color-surface);
+}
+
+.section--text {
+  padding: 72px 0;
+  background: #ffffff;
+}
+
+.section--text h1 {
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}

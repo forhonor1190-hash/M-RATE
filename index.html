@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Рейтинг медийной активности вузов - М-Рейтинг.РФ</title>
+    <meta
+      name="description"
+      content="Разработанный M-RATE учитывает эффективность работы вузов в медийном пространстве по трем основным направлениям: СМИ, социальные сети и сайты."
+    />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/sections.css" />
+    <script
+      src="https://cdn.jsdelivr.net/npm/xlsx@0.19.3/dist/xlsx.full.min.js"
+      defer
+    ></script>
+    <script type="module" src="js/app.js" defer></script>
+  </head>
+  <body>
+    <div class="layout">
+      <header class="navbar">
+        <div class="container navbar-container">
+          <a class="navbar-brand" href="index.html">м-рейтинг.рф</a>
+          <nav class="navbar-nav">
+            <a class="nav-link" href="#rating">Рейтинг</a>
+            <a class="nav-link" href="vuzam.html">Вузам</a>
+            <a class="nav-link" data-contact-link href="#">Связаться с нами</a>
+          </nav>
+        </div>
+      </header>
+
+      <main>
+        <section class="section section--hero" id="hero">
+          <div class="container hero-container">
+            <div class="hero-heading">
+              <div class="hero-title">Рейтинг медийной активности вузов</div>
+              <div class="hero-subtitle">М-Рейтинг.РФ</div>
+            </div>
+            <div class="hero-content">
+              <h2>О рейтинге</h2>
+              <p>
+                M-RATE — официальный рейтинг медийной активности вузов России.
+                Он учитывает эффективность работы университетов в медийном
+                пространстве по трем основным направлениям: работе со СМИ,
+                с собственной аудиторией в социальных сетях и с собственными
+                сайтами.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section class="section section--rating" id="rating">
+          <div class="container">
+            <div class="rating-header">
+              <div class="rating-title">
+                <h2>Рейтинг</h2>
+              </div>
+              <div class="rating-search">
+                <label class="search-label" for="searchInput">Поиск</label>
+                <input
+                  id="searchInput"
+                  type="search"
+                  class="search-input"
+                  placeholder="Введите название вуза"
+                />
+              </div>
+              <div class="rating-months">
+                <span class="month-label">Месяцы</span>
+                <button class="month-button" type="button" id="monthToggle">
+                  Выбрать месяц
+                </button>
+                <div class="month-menu" id="monthMenu"></div>
+              </div>
+              <div class="rating-period">
+                <span class="period-label">Период</span>
+                <span id="activePeriod" class="period-value">Январь 2026</span>
+              </div>
+            </div>
+
+            <div class="rating-tabs">
+              <button class="tab-button active" data-tab="consolidated" type="button">
+                Сводный рейтинг
+              </button>
+              <button class="tab-button" data-tab="smi" type="button">СМИ</button>
+              <div class="tab-group" data-tab="social">
+                <button class="tab-button tab-button--group" data-tab="social" type="button">
+                  Социальные сети
+                </button>
+                <div class="tab-submenu">
+                  <button class="tab-subbutton" data-tab="social" type="button">
+                    Социальные сети
+                  </button>
+                  <button class="tab-subbutton" data-tab="vk" type="button">ВКонтакте</button>
+                  <button class="tab-subbutton" data-tab="tg" type="button">Telegram</button>
+                  <button class="tab-subbutton" data-tab="ok" type="button">MAX</button>
+                  <button class="tab-subbutton" data-tab="rt" type="button">Rutube</button>
+                </div>
+              </div>
+              <button class="tab-button" data-tab="site" type="button">Сайт</button>
+              <button class="tab-button" data-tab="agenda" type="button">
+                Федеральная повестка
+              </button>
+            </div>
+
+            <div class="rating-summary">
+              <span id="resultCount">0 вузов</span>
+              <div class="rating-limits">
+                <button class="limit-button active" data-limit="5">5 вузов</button>
+                <button class="limit-button" data-limit="10">10 вузов</button>
+                <button class="limit-button" data-limit="50">50 вузов</button>
+                <button class="limit-button" data-limit="all">все</button>
+              </div>
+            </div>
+
+            <ul id="ratingList" class="rating-list"></ul>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <div class="container footer-container">
+          <div class="footer-brand">М-Рейтинг.РФ</div>
+          <div class="footer-text">
+            Рейтинг подготовлен совместно с Министерством науки и высшего
+            образования Российской Федерации
+          </div>
+          <a class="footer-contact" data-contact-link href="#">Связаться с нами</a>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

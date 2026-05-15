@@ -229,11 +229,13 @@
 
 .tab-group {
   position: relative;
+  z-index: 20;
 }
 
 .tab-group.is-open .tab-submenu,
 .tab-group:hover .tab-submenu,
 .tab-group:focus-within .tab-submenu {
+  display: grid;
   opacity: 1;
   pointer-events: auto;
   transform: translateY(0);
@@ -245,7 +247,7 @@
   top: 100%;
   background: #ffffff;
   padding: 10px;
-  display: grid;
+  display: none;
   gap: 6px;
   opacity: 0;
   pointer-events: none;
